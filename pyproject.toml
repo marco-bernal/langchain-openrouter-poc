@@ -1,5 +1,7 @@
 [project]
 name = "langchainopenrouter"
 version = "0.1.0"
-requires-python = ">=3.15"
-dependencies = []
+requires-python = "==3.13.18"
+dependencies = [
+    "langchain-openrouter>=0.2.9",
+]
