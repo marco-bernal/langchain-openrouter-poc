@@ -1,12 +1,16 @@
 from langchain_openrouter import ChatOpenRouter
+from langchain_core.prompts import PromptTemplate
 
-
-model = ChatOpenRouter(
+open_router_model = ChatOpenRouter(
     model="anthropic/claude-sonnet-4.6",
     temperature=0.8,
 )
 
-def print_chat():
-    # Example usage
-    response = model.invoke("What NFL team won the Super Bowl in the year Justin Bieber was born?")
-    print(response.content)
+template = PromptTemplate.from_template("You are a Senior Backend Java Developer. Please explain in detail the following: {topic}")
+
+chain = template | open_router_model
+topic = "How the create and use Virtual Threads in Java 25. If that version is too new, downgrade to Java 24." # User prompt as parameter
+
+def print_open_router_chat():
+    response = chain.invoke({"topic": topic})
+    print(response)
