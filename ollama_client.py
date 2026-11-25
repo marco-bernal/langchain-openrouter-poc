@@ -1,6 +1,7 @@
 from langchain_ollama import ChatOllama
 from langchain_core.prompts import PromptTemplate
 
+# Runs a local model stored in my machine
 ollama_model = ChatOllama(model="qwen3.5:4b")
 
 template = PromptTemplate.from_template("You are a Senior Backend Java Developer. Please explain in detail the following: {topic}")

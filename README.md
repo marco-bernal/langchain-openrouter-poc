@@ -1,8 +1,8 @@
-## Langchain, OpenRourter and HuggingFace Integrations PoC.
+## Langchain and OpenRourter Integration PoC.
 
 * Langchain/Langgraph used for creating agents and workflows.
 * OpenRouter to use LLMs as you go.
-* HuggingFace for using experimental LLMs locally.
+* Ollama to use local models.
 
 With the tools above it is possible to create multimodel agentic workflows.
 
@@ -24,11 +24,7 @@ Polish this description. Once the PoC is finished.
 * Set up the `OPENROUTER_API_KEY` env variable. Either, in the run config of PyCharm or as env variable on the console: 
 export `OPENROUTER_API_KEY= my_key`.
 
-* Run the `main.py` file: `python main.py` 
-
-## TODO:
-* Add timers and compare how long it takes for every client to respond.
+* Run the project: `uv run main.py`
 
 ### Next steps:
-* Create my first agent (Langchain/Langgraph and OpenRouter): Tech with Tim.
-* Update and Run code from TL:DR to use it in my machine. (Langchain/Langgraph and OpenRouter)
+* Make OpenRouter and Ollama print the streams as they are generated.
